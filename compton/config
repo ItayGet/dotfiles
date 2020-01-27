@@ -22,14 +22,14 @@ shadow-exclude = [
 # xinerama-shadow-crop = true;
 
 # Opacity
-menu-opacity = 0.8;
-inactive-opacity = 0.8;
-active-opacity = 0.8;
-frame-opacity = 0.8;
+menu-opacity = 0.9;
+inactive-opacity = 0.9;
+active-opacity = 0.9;
+frame-opacity = 0.9;
 alpha-step = 0.06;
 blur-background = true;
 blur-method = "kawase";
-#blur-strength = 12;
+blur-strength = 10;
 blur-background-exclude = [
 	# "window_type = 'dock'",
 	# "window_type = 'desktop'",
@@ -37,7 +37,8 @@ blur-background-exclude = [
 ];
 opacity-rule = [
 	"99:class_g != 'URxvt' && focused",
-	"80:window_type = 'dock' && class_g = 'i3bar'"
+	"99:fullscreen",
+	"80:window_type = 'dock' && class_g = 'i3bar'",
 ];
 
 # Fading

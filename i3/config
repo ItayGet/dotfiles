@@ -203,7 +203,8 @@ bindsym $mod+r mode "resize"
 
 # exec on startup
 exec_always feh --bg-scale ~/bgs/bg.jpg
-exec_always compton --blur-background --blur-method kawase --blur-strength 12 --opacity-rule 85:'class_g="Termite"' --backend glx
+exec_always ~/.config/i3/exec_compton.sh
+exec_always ~/.config/i3/exec_lifebar.sh
 for_window [class=".*"] border pixel 0
 gaps inner 15
 focus_follows_mouse no
@@ -211,20 +212,19 @@ mouse_warping none
 # smart_gaps on
 
 #i3bar
-bar {
-	status_command i3status
-	position top
-	font pango:$font $fontsize
-        colors {
-          background #30303000
-          statusline #ffffff
-
-          focused_workspace  #4c7899 #285577 #ffffff
-          active_workspace   #333333 #5f676a #ffffff
-          inactive_workspace #333333 #222222 #888888
-          urgent_workspace   #2f343a #900000 #ffffff
-        }
-}
+# bar {
+# 	status_command i3status
+# 	position top
+#         colors {
+#           background #30303000
+#           statusline #ffffff
+# 
+#           focused_workspace  #4c7899 #285577 #ffffff
+#           active_workspace   #333333 #5f676a #ffffff
+#           inactive_workspace #333333 #222222 #888888
+#           urgent_workspace   #2f343a #900000 #ffffff
+#         }
+# }
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -257,7 +257,7 @@ bindsym $mod+Mod1+$right move workspace to output right
 # Configuring windows to start at ws
 exec --no-startup-id i3-msg 'workspace $ws1; exec urxvt'
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace $ws9; exec /usr/bin/ncspot'
+exec --no-startup-id i3-msg 'workspace $ws9; exec /usr/bin/spotify'
 exec --no-startup-id i3-msg 'workspace $ws0; exec /usr/bin/discord'
 
 workspace $ws1 output 0
