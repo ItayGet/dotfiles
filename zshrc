@@ -15,6 +15,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # vim-like keys
+bindkey -v
 
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
