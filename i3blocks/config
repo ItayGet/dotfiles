@@ -1,7 +1,7 @@
 
 full_text=/
 align=center
-color=#eceff4
+color=#ebcb8b
 separator=false
 separator_block_width=7
 
@@ -27,7 +27,15 @@ separator=false
 color="#a3be8c"
 markup=pango
 command=python spotify.py -c ./spotify.conf
+full_text= Not playing
 interval=persist
+
+[seperator]
+
+[date]
+color="#d08770"
+command=date +%D
+interval=5
 
 [seperator]
 

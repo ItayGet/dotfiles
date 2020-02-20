@@ -177,12 +177,14 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Return exec i3-sensible-terminal
 
 #exec on startup 
-exec_always feh --bg-scale ~/prm/bgs/hex.jpg
+exec_always ~/.config/i3/wpmanager/change.py setcurr
 exec_always ~/.config/i3/exec_compton.sh
 for_window [class=".*"] border pixel 0
 gaps inner 15
 focus_follows_mouse no
 mouse_warping none
+
+border_radius 0
 # smart_gaps on
 
 ############
@@ -224,6 +226,15 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioPlay exec playerctl play-pause 
 bindsym XF86AudioNext exec playerctl next       
 bindsym XF86AudioPrev exec playerctl previous   
+
+## spotfify player controls
+#bindsym XF86AudioPlay exec playerctl play-pause 
+#bindsym XF86AudioNext exec playerctl next       
+#bindsym XF86AudioPrev exec playerctl previous   
+
+# Wallpapaer management
+bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/change.py prev
+bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/change.py next
 
 #####################
 #       startup     #
