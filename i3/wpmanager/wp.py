@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+import states
+import os
+import sys
+
+F_CURR_WP  = os.path.dirname(os.path.realpath(__file__)) + "/currwp"
+BGS_DIR = os.path.expanduser("~/prm/bgs/")
+
+def list_files(path):
+    l = []
+
+    for f in os.listdir(path):
+        f = BGS_DIR + f
+        if os.path.isfile(f):
+            l.append(f)
+
+    return l
+
+def move_wp(index):
+    curr_wp = states.move_state(F_CURR_WP, list_files(BGS_DIR), index)
+
+    # Please don't name your fiels something stupid
+    # I'm too lazy to escape stuff
+    os.system("feh --bg-scale {}".format(curr_wp))
+
+    return curr_wp
+
+if sys.argv[1] == "next":
+    move_wp(1)
+
+if sys.argv[1] == "prev":
+    move_wp(-1)
+
+if sys.argv[1] == "setcurr":
+    move_wp(0)
