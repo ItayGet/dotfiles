@@ -39,8 +39,8 @@ def move_wp(index):
     except ValueError:
         print("WARNING: current wallpaper was not found in directory. using the first file in dir")
         i_curr_wp = 0
-
-    curr_wp = files[i_curr_wp+index+1%len(files)-1]
+    
+    curr_wp = files[(i_curr_wp+index)%(len(files))]
     
     write_currwp(curr_wp)
 

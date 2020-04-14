@@ -177,7 +177,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Return exec i3-sensible-terminal
 
 #exec on startup 
-exec_always ~/.config/i3/wpmanager/change.py setcurr
+exec_always ~/.config/i3/wpmanager/wp.py setcurr
 exec_always ~/.config/i3/exec_compton.sh
 for_window [class=".*"] border pixel 0
 gaps inner 15
@@ -227,14 +227,16 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next       
 bindsym XF86AudioPrev exec playerctl previous   
 
-## spotfify player controls
-#bindsym XF86AudioPlay exec playerctl play-pause 
-#bindsym XF86AudioNext exec playerctl next       
-#bindsym XF86AudioPrev exec playerctl previous   
+# spotfify volume change
+bindsym Mod4+F3 exec ~/.config/i3/spot_vol.py +10%
+bindsym Mod4+F2 exec ~/.config/i3/spot_vol.py -10%
 
-# Wallpapaer management
-bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/change.py prev
-bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/change.py next
+# Wallpaper management
+bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/wp.py prev
+bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/wp.py next
+
+# change between layouts
+bindsym $mod+Shift+a exec ~/.config/i3/layoutmanager/layout.py next
 
 #####################
 #       startup     #
