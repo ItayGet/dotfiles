@@ -44,7 +44,6 @@ set $right l
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
 # kill focused window
 bindsym $mod+x kill
 
@@ -56,7 +55,6 @@ bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
-
 
 # change focus
 bindsym $mod+$left focus left
@@ -113,7 +111,6 @@ bindsym $mod+Mod1+Right move workspace to output right
 # Switch ws to another window
 bindsym $mod+Mod1+$left move workspace to output left
 bindsym $mod+Mod1+$right move workspace to output right
-
 
 # switch to workspace
 bindsym $mod+$kws1 workspace $ws1
@@ -216,6 +213,9 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status pkill -RTMIN+5 i3blocks
+
+# Grab screenshot
+bindsym Print exec deepin-screenshot
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%  && $refresh_i3status 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%  && $refresh_i3status 

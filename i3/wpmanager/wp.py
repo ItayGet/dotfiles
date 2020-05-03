@@ -23,6 +23,7 @@ def move_wp(index):
     # Please don't name your fiels something stupid
     # I'm too lazy to escape stuff
     os.system("feh --bg-scale {}".format(curr_wp))
+    os.system("notify-send \"Wallpaper changed\" \"New background: {}\" -u low".format(curr_wp.split("/")[-1]))
 
     return curr_wp
 
