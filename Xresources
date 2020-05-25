@@ -54,5 +54,3 @@ URxvt.depth: 32
 URxvt*termName: rxvt-unicode
 
 URxvt.iso14755: False
-
-
