@@ -8,6 +8,7 @@ zstyle ':completion:*' menu select
 
 # aliases
 alias ls='ls --color'
+alias dup='urxvt -e ranger &'
 
 # setting up history
 HISTFILE=~/.histfile
