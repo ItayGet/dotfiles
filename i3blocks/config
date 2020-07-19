@@ -1,9 +1,8 @@
-
 full_text=/
 align=center
 color=#ebcb8b
 separator=false
-separator_block_width=7
+seperator_block_width=7
 
 [pad]
 color=#bf616a
