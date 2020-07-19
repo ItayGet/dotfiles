@@ -219,7 +219,6 @@ gaps outer $def_out_gaps
 focus_follows_mouse no
 mouse_warping none
 
-border_radius 0
 # smart_gaps on
 
 ############
@@ -273,9 +272,6 @@ bindsym $mod+F2 exec ~/.config/i3/spot_vol.py -10%
 # Wallpaper management
 bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/wp.py prev
 bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/wp.py next
-
-# change between layouts
-bindsym $mod+Shift+a exec ~/.config/i3/layoutmanager/layout.py next
 
 #####################
 #       startup     #
