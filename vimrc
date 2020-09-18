@@ -7,8 +7,13 @@ set number relativenumber
 " Autocomplete
 set wildmode=longest,list,full
 
+set timeout timeoutlen=5000 ttimeoutlen=100
+
 " Automatically kill dunst after writing to its config
 autocmd BufWritePost ~/.config/dunst/dunstrc,~/dotfiles/dunst/dunstrc !pkill dunst & dunst 
+
+" Automatically update spicetify after writing ot its config
+autocmd BufWritePost ~/.config/spicetify/* !spicetify apply
 
 " Making copying and pasting possible
 vnoremap <C-Insert> "+y :let @*=@+<CR>
