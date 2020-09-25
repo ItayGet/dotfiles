@@ -1,14 +1,14 @@
 #setting up ws vars
-set $ws1 "1 "
-set $ws2 "2 龜"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9 "
-set $ws0 "10 "
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws0 "10:"
 
 #setting up ws keybinds
 set $kws1 "1"
@@ -224,21 +224,22 @@ mouse_warping none
 ############
 #    bar   #
 ############
-bar {
-	status_command i3blocks -c ~/.config/i3blocks/config
-	position top
-	#stolen and modified from https://github.com/erikdubois/Archi3/blob/master/config
-        colors {
-		background #2F2F2F
-		statusline #eeeeee
-		separator #666666
-		#                     border  backgr. text
-		focused_workspace     #5f676a #5f676a #222222
-		active_workspace      #5f676a #5f676a #222222
-		inactive_workspace    #222222 #222222 #5f676a
-		urgent_workspace      #4A4A4A #4A4A4A #222222
-	}
-}
+# bar {
+# 	status_command i3blocks -c ~/.config/i3blocks/config
+# 	position top
+# 	#stolen and modified from https://github.com/erikdubois/Archi3/blob/master/config
+#         colors {
+# 		background #2F2F2F
+# 		statusline #eeeeee
+# 		separator #666666
+# 		#                     border  backgr. text
+# 		focused_workspace     #5f676a #5f676a #222222
+# 		active_workspace      #5f676a #5f676a #222222
+# 		inactive_workspace    #222222 #222222 #5f676a
+# 		urgent_workspace      #4A4A4A #4A4A4A #222222
+# 	}
+# }
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
