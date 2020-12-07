@@ -48,15 +48,16 @@ def move_wp(index):
     # I don't want to escape stuff
     os.system("feh --bg-scale {}".format(curr_wp))
 
-if len(sys.argv) < 2:
-    print(read_currwp())
-    quit()
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print(read_currwp())
+        quit()
 
-if sys.argv[1] == "next":
-    move_wp(1)
+    if sys.argv[1] == "next":
+        move_wp(1)
 
-if sys.argv[1] == "prev":
-    move_wp(-1)
+    if sys.argv[1] == "prev":
+        move_wp(-1)
 
-if sys.argv[1] == "setcurr":
-    move_wp(0)
+    if sys.argv[1] == "setcurr":
+        move_wp(0)
