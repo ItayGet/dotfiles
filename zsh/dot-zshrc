@@ -8,27 +8,17 @@ zstyle ':completion:*' menu select
 
 # aliases
 alias ls='ls --color'
-alias dup='urxvt -e ranger &'
+alias dup='urxvt -e ranger &;disown'
 
 # setting up history
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-# vim-like keys
-bindkey -v
-
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
-
-# bindkey  "^[[7"   beginning-of-line
-# bindkey  "^[[8"   end-of-line
-
-mkcd () {
-  mkdir "$1"
-  cd "$1"
-}
 
 # syntax highlighting, must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export PATH=~/prm/scripts:$PATH

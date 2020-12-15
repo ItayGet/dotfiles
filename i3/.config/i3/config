@@ -261,7 +261,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle        && $refresh_i3status 
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status 
 
-# Media player controls
+# Spotify player controls
 bindsym XF86AudioPlay exec playerctl -p spotify play-pause 
 bindsym XF86AudioNext exec playerctl -p spotify next       
 bindsym XF86AudioPrev exec playerctl -p spotify previous   
@@ -269,6 +269,11 @@ bindsym XF86AudioPrev exec playerctl -p spotify previous
 # Spotfify volume change
 bindsym $mod+F3 exec ~/.config/i3/spot_vol.py +10%
 bindsym $mod+F2 exec ~/.config/i3/spot_vol.py -10%
+
+# General play controls
+bindsym $mod+F8 exec playerctl play-pause 
+bindsym $mod+F7 exec playerctl next       
+bindsym $mod+F9 exec playerctl previous   
 
 # Wallpaper management
 bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/wp.py prev
