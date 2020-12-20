@@ -102,8 +102,14 @@ cursor-scroll =
 [bar/main2]
 inherit = bar/main
 monitor = HDMI-0
-odules-center = workspaces  
+modules-center = workspaces  
 modules-right = cpu pulseaudio network sep owndate 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[bar/main3]
+inherit = bar/main2
+monitor = HDMI-1-2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

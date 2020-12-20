@@ -22,3 +22,6 @@ _comp_options+=(globdots)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=~/prm/scripts:$PATH
+
+export VISUAL=nvim;
+export EDITOR=nvim;

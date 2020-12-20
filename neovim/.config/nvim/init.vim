@@ -1,6 +1,22 @@
 syntax on
 filetype plugin indent on
 
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Plug 'neoclide/coc.nvim'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'Shougo/deoplete.nvim'
+
+" Plug 'deoplete-plugins/deoplete-clang'
+
+" Plug 'Shougo/deoplete-clangx'
+
+Plug 'xavierd/clang_complete'
+
+call plug#end()
+
 " Set numbers
 set number relativenumber
 
@@ -26,5 +42,6 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-
 let g:livepreview_previewer = 'zathura'
+
+" source ~/.config/nvim/coc.vim
