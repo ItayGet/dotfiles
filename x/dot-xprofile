@@ -1,5 +1,5 @@
 xset r rate 280 45
 setxkbmap -option caps:swapescape
-xrandr --output DVI-I-0 --off --output DVI-I-1 --off --output HDMI-0 --mode 1280x1024 --pos 2060x54 --rotate normal --output DP-0 --off --output DP-1 --off --output DP-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off --output VGA-1-1 --off --output HDMI-1-1 --off --output HDMI-1-2 --off
+xrandr --output DVI-I-0 --off --output DVI-I-1 --off --output HDMI-0 --mode 1280x1024 --pos 3466x125 --rotate normal --output DP-0 --mode 1920x1080 --pos 1389x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output VGA-1-1 --off --output HDMI-1-1 --off --output HDMI-1-2 --mode 1280x1024 --pos 0x28 --rotate normal
 
 export GTK_THEME=Nordic
