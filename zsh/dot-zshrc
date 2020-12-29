@@ -1,4 +1,4 @@
-# set custom prompt
+# Set custom prompt
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
@@ -6,8 +6,9 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-# aliases
+# Aliases
 alias ls='ls --color'
+alias grep='grep --color'
 alias dup='urxvt -e ranger &;disown'
 alias vim='nvim'
 alias v='nvim'
@@ -20,7 +21,16 @@ alias syu='sudo pacman -Syu'
 alias grepdir='grep -iHnr'
 alias s='sudo'
 
-# setting up history
+# Aliases for systemctl
+alias sd='sudo systemctl' # Systemd
+alias sdr='sd start' # Run
+alias sdq='sd stop' # Quit
+alias sdr='sd restart'
+alias sdi='sd status' # Info
+alias sdh='sd hibernate'
+
+
+# Setting up history
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -28,10 +38,10 @@ SAVEHIST=1000
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
-# syntax highlighting, must be last
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export PATH=~/prm/scripts:$PATH
 
-export VISUAL=nvim;
-export EDITOR=nvim;
+export VISUAL=nvim
+export EDITOR=nvim
+
+# Syntax highlighting, must be last
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
