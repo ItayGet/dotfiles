@@ -3,6 +3,7 @@
         "ccls": {
             "command": "ccls",
             "filetypes": [
+		"def",
                 "c",
                 "cpp",
                 "objc",
