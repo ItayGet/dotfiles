@@ -89,7 +89,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+m layout stacking
 bindsym $mod+comma layout tabbed
 bindsym $mod+n layout toggle split
 
@@ -278,6 +278,9 @@ bindsym $mod+F9 exec playerctl previous
 # Wallpaper management
 bindsym $mod+Shift+comma  exec ~/.config/i3/wpmanager/wp.py prev
 bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/wp.py next
+
+# Suspend monitors
+bindsym $mod+s exec xset dpms force suspend
 
 #####################
 #       startup     #
