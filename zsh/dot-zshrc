@@ -9,6 +9,16 @@ zstyle ':completion:*' menu select
 # aliases
 alias ls='ls --color'
 alias dup='urxvt -e ranger &;disown'
+alias vim='nvim'
+alias v='nvim'
+alias pc='pacman'
+alias y='yay'
+alias ys='yay -S'
+alias pcs='sudo pacman -S'
+alias pcr='sudo pacman -Rsn'
+alias syu='sudo pacman -Syu'
+alias grepdir='grep -iHnr'
+alias s='sudo'
 
 # setting up history
 HISTFILE=~/.histfile

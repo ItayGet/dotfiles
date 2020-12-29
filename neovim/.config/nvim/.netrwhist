@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/itayget/prm/projects/icc/include'
+let g:netrw_dirhist_3='/home/itayget/prm/projects/icc/src'
+let g:netrw_dirhist_2='/home/itayget/prm/projects/icc/include'
+let g:netrw_dirhist_1='/home/itayget/prm/projects/icc'
+let g:netrw_dirhist_0='/home/itayget/prm/projects/icc/src'
+let g:netrw_dirhist_9='/home/itayget/prm/projects/icc/obj'
+let g:netrw_dirhist_8='/home/itayget/prm/projects/icc'
+let g:netrw_dirhist_7='/home/itayget/prm/projects/icc/src'
+let g:netrw_dirhist_6='/home/itayget/prm/projects/icc'
+let g:netrw_dirhist_5='/home/itayget/prm/projects/icc/include'

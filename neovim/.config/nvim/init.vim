@@ -3,8 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
-Plug 'preservim/nerdtree'
-
 call plug#end()
 
 " Configure Coc
@@ -15,6 +13,9 @@ filetype plugin indent on
 set number relativenumber
 set wildmode=longest,list,full
 set timeout timeoutlen=5000 ttimeoutlen=100
+
+" Override syntax for specific types
+autocmd BufNewFile,BufRead *.def set syntax=c
 
 " Automatically kill dunst after writing to its config
 autocmd BufWritePost ~/.config/dunst/dunstrc,~/dotfiles/dunst/dunstrc !pkill dunst & dunst 
