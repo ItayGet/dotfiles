@@ -1,0 +1,58 @@
+# Bspwm sxhkd Config
+# ============================
+
+# Window manipulation
+# -------------------
+
+# Restart sxkhd service
+super + shift + r
+	~/.config/bspwm/autostart.sh &
+	~/.config/bspwm/bspwmrc
+
+# Regular: Move to a different node in the direction
+# Shift: Move node around in a desktop
+# Alt: Move desktop to a different monitor
+super + {_,shift + ,alt + }{h,j,k,l}
+	notify-send 'bspc {node -f,node,node -s,desktop -m} {west,south,north,east}'
+
+# Regular: Switch between desktops
+# Shift: Move node to desktop
+super + {_,shift + }{1-7,q,w,e}
+	bspc {desktop -f,node -d} ^{1-9,10}
+
+# Close a node
+super + x
+	bspc node -c
+
+# Toggle layout vertically/horizontally
+super + {_,shift + }v
+	bspc node focused -F {vertical,horizontal}
+
+# Toggle fullscreen
+super + f
+	bspc node focused -t \~fullscreen
+
+# Regular: Focus floating windows
+# Alt: Focus non floating windows
+super + {_,alt + }space
+	bspc node -f any.\{,!}floating
+
+# Toggle floating
+super + shift + space
+	bspc node focused -t \~floating
+
+
+# Programs
+# --------
+
+# Regular: Start up a terminal with ranger
+# Regular Start up a terminal with a shell
+super + {_,shift + }Return
+	urxvt {-e ranger,}
+
+
+# Start up rofi
+super + d
+	rofi -show run -theme onedark
+
+

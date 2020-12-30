@@ -34,7 +34,7 @@ margin-top = 0
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [bar/main]
-monitor =
+monitor = DP-0
 monitor-fallback =
 monitor-strict = false
 override-redirect = false
@@ -44,7 +44,6 @@ fixed-center = true
 width = 100%
 height = 25
 
-wm-restack = i3
 background = ${color.bg}
 foreground = ${color.fg}
 
@@ -74,7 +73,7 @@ modules-right = pulseaudio sep spotify sep owndate
 separator =
 spacing = 0
 dim-value = 1.0
-wm-name =i3wm
+wm-name =bspwm
 locale = 
 
 tray-position = left
@@ -104,14 +103,6 @@ inherit = bar/main
 monitor = HDMI-0
 modules-center = workspaces  
 modules-right = cpu pulseaudio network sep owndate 
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[bar/main3]
-inherit = bar/main2
-monitor = HDMI-1-2
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [settings]
 throttle-output = 5
@@ -190,7 +181,7 @@ click-left = st -e calcurse
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/workspaces]
-type = internal/i3
+type = internal/bspwm
 pin-workspaces = true
 strip-wsnumbers = true
 index-sort = true
