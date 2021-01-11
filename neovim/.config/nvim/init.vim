@@ -20,7 +20,7 @@ autocmd BufNewFile,BufRead *.def set syntax=c
 " Automatically kill dunst after writing to its config
 autocmd BufWritePost ~/.config/dunst/dunstrc,~/dotfiles/dunst/dunstrc !pkill dunst & dunst 
 
-"Uncomment the following to have Vim jump to the last position when
+" Have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")

@@ -7,28 +7,36 @@ compinit
 zstyle ':completion:*' menu select
 
 # Aliases
+function disownlast {
+	disown "$(jobs | tail -n1 | sed 's/\[/%/; s/\].*//')"
+}
+
 alias ls='ls --color'
 alias grep='grep --color'
-alias dup='urxvt -e ranger &;disown'
+alias pacman='pacman --color always'
+alias sudo='sudo '
+alias dup='urxvt -e ranger &;disownlast'
 alias vim='nvim'
 alias v='nvim'
-alias pc='pacman'
 alias y='yay'
-alias ys='yay -S'
-alias pcs='sudo pacman -S'
-alias pcr='sudo pacman -Rsn'
-alias syu='sudo pacman -Syu'
+alias ys='y -S'
+alias pc='sudo pacman'
+alias pcs='pc -S'
+alias pcr='pc -Rsn'
+alias syu='pc -Syu'
 alias grepdir='grep -iHnr'
 alias s='sudo'
+alias rr'sudo ranger' # Root ranger
 
 # Aliases for systemctl
 alias sd='sudo systemctl' # Systemd
-alias sdr='sd start' # Run
-alias sdq='sd stop' # Quit
-alias sdr='sd restart'
-alias sdi='sd status' # Info
+alias sdr='ss start' # Like -S
+alias sdq='sr stop' # Like -R
+alias sdr='sd restart' # 
+alias sdi='sd status' # Like -Q
 alias sdh='sd hibernate'
 
+bindkey -e
 
 # Setting up history
 HISTFILE=~/.histfile
