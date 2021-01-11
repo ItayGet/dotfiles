@@ -11,10 +11,10 @@ URxvt.secondaryScroll: 0
 
 URxvt.depth: 32
 
-URxvt.keysym.C-z:     resize-font:smaller
-URxvt.keysym.C-x:      resize-font:bigger
-URxvt.keysym.C-v:     resize-font:reset
-URxvt.keysym.C-c:  resize-font:show
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-equal:      resize-font:bigger
+URxvt.keysym.C-plus:     resize-font:reset
+URxvt.keysym.C-underscore:  resize-font:show
 
 #define nord0 #2E3440
 #define nord1 #3B4252
