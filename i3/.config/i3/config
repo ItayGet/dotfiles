@@ -212,7 +212,7 @@ bindsym $mod+shift+Return exec i3-sensible-terminal
 
 #exec on startup 
 exec_always ~/.config/i3/wpmanager/wp.py setcurr
-exec_always ~/.config/i3/exec_compton.sh
+exec_always ~/.config/i3/exec_picom.sh
 for_window [class=".*"] border pixel 0
 gaps inner $def_in_gaps
 gaps outer $def_out_gaps

@@ -1,0 +1,39 @@
+# Shadow
+shadow = true;
+shadow-radius = 7;
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-exclude = [
+	"name = 'Notification'",
+	"class_g = 'Polybar'",
+	"class_g = 'Conky'",
+	"class_g ?= 'Notify-osd'",
+	"class_g = 'Cairo-clock'",
+	"_GTK_FRAME_EXTENTS@:c"
+];
+
+# Has to be added because of dual_kawase
+experimental-backends = true;
+
+# Opacity
+inactive-opacity = 0.9;
+active-opacity = 1;
+frame-opacity = 0.9;
+blur-background = true;
+blur-method = "dual_kawase";
+blur-strength = 6;
+opacity-rule = [
+	"90:class_g = 'URxvt'",
+	"100:fullscreen",
+	"75:window_type = 'dock' && class_g = 'Polybar'",
+	"60:class_g = 'Rofi'",
+];
+
+# Fading
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+
+# Other
+backend = "glx";
+focus-exclude = [ "class_g = 'Cairo-clock'" ];
