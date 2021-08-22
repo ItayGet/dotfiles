@@ -34,7 +34,7 @@ margin-top = 0
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [bar/main]
-monitor = DP-0
+monitor = eDP1
 monitor-fallback = VNC-0
 monitor-strict = false
 override-redirect = false
