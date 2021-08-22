@@ -3,6 +3,8 @@
 import os
 
 def read_curr(f):
+    if not os.path.isfile(f):
+        return ''
     with open(f, 'r') as file:
         r = file.read()
     return r
