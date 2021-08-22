@@ -5,7 +5,7 @@ import os
 import sys
 
 F_CURR_WP  = os.path.dirname(os.path.realpath(__file__)) + "/currwp"
-BGS_DIR = os.path.expanduser("~/prm/bgs/")
+BGS_DIR = os.path.expanduser("~/Documents/backgrounds/")
 
 def list_files(path):
     l = []
