@@ -67,7 +67,7 @@ font-2 = "Material Icons:style=Regular:size=10;3"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;2"
  
 modules-center = workspaces  
-modules-right = pulseaudio sep spotify sep owndate 
+modules-right = pulseaudio network sep spotify sep owndate 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 
@@ -155,7 +155,7 @@ format-muted-padding = 2
 
 [module/network]
 type = internal/network
-interface = enp3s0
+interface = wlp0s20f3
 interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
@@ -167,8 +167,8 @@ format-disconnected = <label-disconnected>
 format-disconnected-background = ${color.bg}
 format-disconnected-foreground = ${color.fg}
 format-disconnected-padding = 2
-label-connected =  
-label-disconnected =  
+label-connected = 
+label-disconnected = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
