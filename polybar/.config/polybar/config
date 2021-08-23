@@ -165,8 +165,8 @@ format-disconnected = <label-disconnected>
 format-disconnected-background = ${color.bg}
 format-disconnected-foreground = ${color.fg}
 format-disconnected-padding = 2
-label-connected =  
-label-disconnected =  
+label-connected = 直 
+label-disconnected = 睊 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -224,7 +224,7 @@ type = custom/script
 interval = 1
 format-prefix = " "
 format = %{A4:~/.config/i3/spot_vol.py +10%:}%{A5:~/.config/i3/spot_vol.py -10%:}%{A1:playerctl -p spotify play-pause:}<label>%{A}%{A}%{A}
-exec = python ~/.config/polybar/spotify_status.py -f ' {artist}  -  {song}'
+exec = python ~/.config/polybar/spotify_status.py -f '阮  {artist}  -  {song}'
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
