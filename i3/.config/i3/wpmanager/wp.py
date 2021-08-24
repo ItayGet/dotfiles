@@ -6,6 +6,7 @@ import sys
 
 F_CURR_WP  = os.path.dirname(os.path.realpath(__file__)) + "/currwp"
 BGS_DIR = os.path.expanduser("~/Documents/backgrounds/")
+CURR_WP_FILE = os.path.join(BGS_DIR, "currwp")
 
 def list_files(path):
     l = []
@@ -22,8 +23,10 @@ def move_wp(index):
 
     # Please don't name your fiels something stupid
     # I'm too lazy to escape stuff
+    os.system("ln -sf {} {}".format(curr_wp, CURR_WP_FILE))
     os.system("feh --bg-scale {}".format(curr_wp))
     os.system("notify-send \"Wallpaper changed\" \"New background: {}\" -u low".format(curr_wp.split("/")[-1]))
+
 
     return curr_wp
 
