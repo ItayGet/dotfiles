@@ -210,6 +210,9 @@ bindsym $mod+g mode "gaps"
 bindsym $mod+Return exec i3-sensible-terminal -e ranger
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
+# Lock computer
+bindsym $mod+shift+s exec light-locker-command -l
+
 #exec on startup 
 exec_always ~/.config/i3/wpmanager/wp.py setcurr
 exec_always ~/.config/i3/exec_picom.sh
@@ -218,6 +221,9 @@ gaps inner $def_in_gaps
 gaps outer $def_out_gaps
 focus_follows_mouse no
 mouse_warping none
+
+
+exec_always --no-startup-id /usr/bin/light-locker
 
 # smart_gaps on
 
