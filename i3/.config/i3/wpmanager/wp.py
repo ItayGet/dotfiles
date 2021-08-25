@@ -9,14 +9,17 @@ BGS_DIR = os.path.expanduser("~/prm/bgs/")
 CURR_WP_FILE = os.path.join(BGS_DIR, "currwp")
 
 def list_files(path):
-    l = []
-
-    for f in os.listdir(path):
-        f = BGS_DIR + f
-        if os.path.isfile(f):
-            l.append(f)
-
-    return l
+    return list(
+        map(
+            lambda f: BGS_DIR + f, 
+            
+            # Filter the symlink currwp
+            filter(
+                lambda f: f != 'currwp' and f[0] != '.',
+                os.listdir(path)
+            )
+        )
+    )
 
 def move_wp(index):
     curr_wp = states.move_state(F_CURR_WP, list_files(BGS_DIR), index)
