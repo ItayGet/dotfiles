@@ -207,7 +207,7 @@ mode "gaps" {
 bindsym $mod+g mode "gaps"
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -e ranger
+bindsym $mod+Return exec ~/.config/i3/exec_ranger.sh
 bindsym $mod+shift+Return exec i3-sensible-terminal
 
 # Lock computer
