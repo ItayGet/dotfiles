@@ -38,6 +38,10 @@ alias sdh='sd hibernate'
 
 bindkey -v
 
+# Ctrl+R like in bash
+bindkey '^R' history-incremental-search-backward
+
+
 bindkey "\e[7~" beginning-of-line
 bindkey "\e[8~" end-of-line
 
