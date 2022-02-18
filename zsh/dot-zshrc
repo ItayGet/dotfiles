@@ -36,6 +36,19 @@ alias sdr='sd restart' #
 alias sdq='sd status' # Like -Q
 alias sdh='sd hibernate'
 
+# Aliases for git
+alias g='git'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gb='git branch'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='gc -m'
+alias gco='git checkout'
+alias gcp='git cherrypick'
+alias gm='git merge'
+
 bindkey -v
 
 # Ctrl+R like in bash
