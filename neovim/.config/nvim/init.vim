@@ -2,8 +2,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+Plug 'puremourning/vimspector'
 
 call plug#end()
+
+let mapleader = " "
 
 " Configure Coc
 source ~/.config/nvim/coc.vim
