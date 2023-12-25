@@ -1,5 +1,5 @@
 URxvt.scrollBar:      false
-URxvt.font:           xft:hack:size=13, xft:DejaVuSansMono Nerd Font :size=13
+URxvt.font:           xft:hack:size=11, xft:DejaVuSansMono Nerd Font :size=11
 URxvt.url-launcher:   /usr/bin/firefox
 URxvt*loginShell:     true
 URxvt*fading:         0
