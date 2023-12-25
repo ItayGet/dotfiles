@@ -291,10 +291,7 @@ bindsym $mod+s exec xset dpms force suspend
 #####################
 #       startup     #
 #####################
-exec --no-startup-id i3-msg 'workspace $ws1; exec urxvt'
-exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace $ws9; exec /usr/bin/spotify'
-exec --no-startup-id i3-msg 'workspace $ws0; exec /usr/bin/discord'
+exec ~/.config/i3/startup.sh $ws1 $ws2 $ws3 $ws4 $ws5 $ws6 $ws7 $ws8 $ws9 ${ws10}
 
 workspace $ws1 output 0
 workspace $ws2 output 0
