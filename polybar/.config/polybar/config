@@ -102,7 +102,7 @@ inherit = bar/main
 monitor = HDMI-0
 monitor-fallback = 
 modules-center = workspaces  
-modules-right = cpu pulseaudio network sep owndate 
+modules-right = cpu pulseaudio network sep spotify sep owndate 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
