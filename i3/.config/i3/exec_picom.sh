@@ -1,3 +1,3 @@
 #!/bin/bash
 killall picom
-picom --config ~/.config/picom/config --experimental-backends
+picom --config ~/.config/picom/config 
