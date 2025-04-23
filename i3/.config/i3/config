@@ -6,9 +6,9 @@ set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
 set $ws7 "7:"
-set $ws8 "8:"
-set $ws9 "9:阮"
-set $ws0 "10:ﭮ"
+set $ws8 "8:"
+set $ws9 "9:󰓇"
+set $ws0 "10:"
 
 #setting up ws keybinds
 set $kws1 "1"
@@ -287,6 +287,10 @@ bindsym $mod+Shift+period exec ~/.config/i3/wpmanager/wp.py next
 
 # Suspend monitors
 bindsym $mod+s exec xset dpms force suspend
+
+# Keybinds
+exec_always setxkbmap -layout us,il
+exec_always setxkbmap -option 'grp:alt_shift_toggle'
 
 #####################
 #       startup     #
